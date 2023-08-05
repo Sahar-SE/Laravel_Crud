@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
