@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -18,6 +19,8 @@ class ProductController extends Controller
     $imageName = time().'.'.$request->image->extension();
     $request->image->move(public_path('products'), $imageName);
 
-    dd($imageName);
+    $product = new Product;
+    $product->image->$imageName;
+    
   }
 }
