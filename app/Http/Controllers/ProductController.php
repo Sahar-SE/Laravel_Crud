@@ -18,7 +18,9 @@ class ProductController extends Controller
   public function store(Request $request){
     //Form Validation
     $request->validate([
-      
+      'name' => 'required',
+      'description' => 'required',
+      'image' => 'required',
     ]);
     //Uploading image
     $imageName = time().'.'.$request->image->extension();
