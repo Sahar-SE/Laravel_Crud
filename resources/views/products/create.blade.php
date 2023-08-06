@@ -24,7 +24,20 @@
   </nav>
 </div>
     <form method="POST">
-      @csrf        
+      @csrf
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name"/>
+
+        <label>Description</label>
+        <textarea name="description" id="" cols="30" rows="10"></textarea>
+
+        <label>Image</label>
+        <input type="file" name="image"/>
+
+        <button type="submit">Submit</button>
+
+      </div>
     </form>
 </body>
 </html>
