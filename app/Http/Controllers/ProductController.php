@@ -23,5 +23,8 @@ class ProductController extends Controller
     $product->name = $request->name;
     $product->description = $request->description;
     $product->image = $imageName;
+
+    $product->save();
+    return back();
   }
 }
