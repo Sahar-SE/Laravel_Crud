@@ -10,7 +10,7 @@
 <div class="bg-gray-800 p-2">
   <nav class="flex justify-between">
     <div>
-      <a href="#" class="text-white text-lg font-semibold px-2">Products</a>
+      <a href="/" class="text-white text-lg font-semibold px-2">Products</a>
     </div>
     <div class="space-x-4">
       <a href="#" class="text-gray-300 hover:text-white">Home</a>
