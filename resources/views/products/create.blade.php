@@ -23,7 +23,7 @@
     </div>
   </nav>
 </div>
-    <form method="POST" action="products/store">
+    <form method="POST" action="products/store" enctype="multipart/form-data">
       @csrf
       <div>
         <label for="name">Name</label>
