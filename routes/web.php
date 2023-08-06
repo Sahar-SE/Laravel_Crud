@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\http\Controllers\ProductController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +16,5 @@ use Illuminate\http\Controllers\ProductController;
 // this code interact with product controller and in here ProductController is
 // the name of the class, index is the action or method which will implement
 // and we give the route a name which is product.index and this option is normal.
-Route::get('/', [ProductController::class, 'index'])->name('product.index');
-Route::get('product/create', [ProductController::class, 'create'])->name('product.create');
+Route::get('/', [ProductController::class, 'index'])->name('products.index');
+Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
