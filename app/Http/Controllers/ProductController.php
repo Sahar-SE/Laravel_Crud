@@ -22,6 +22,7 @@ class ProductController extends Controller
       'description' => 'required',
       'image' => 'required',
     ]);
+    
     //Uploading image
     $imageName = time().'.'.$request->image->extension();
     $request->image->move(public_path('products'), $imageName);
