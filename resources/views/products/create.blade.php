@@ -13,7 +13,7 @@
       <a href="/" class="text-white text-lg font-semibold px-2">Products</a>
     </div>
     <div class="space-x-4">
-      <a href="#" class="text-gray-300 hover:text-white">Home</a>
+      <a href="/" class="text-gray-300 hover:text-white">Home</a>
       <a href="#" class="text-gray-300 hover:text-white">About</a>
       <a href="#" class="text-gray-300 hover:text-white">Services</a>
       <a href="#" class="text-gray-300 hover:text-white">Contact</a>
