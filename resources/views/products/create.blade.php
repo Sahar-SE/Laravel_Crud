@@ -23,6 +23,8 @@
     </div>
   </nav>
 </div>
-    <h1>Create New Product</h1>
+    <form method="POST">
+      @csrf        
+    </form>
 </body>
 </html>
