@@ -17,4 +17,4 @@ use Illuminate\http\Controllers\ProductController;
 // the name of the class, index is the action or method which will implement
 // and we give the route a name which is product.index and this option is normal.
 Route::get('/', [ProductController::class, 'index'])->name('product.index');
-Route::get('product/create', [ProductController::class, 'create'])->name(product.create);
+Route::get('product/create', [ProductController::class, 'create'])->name('product.create');
