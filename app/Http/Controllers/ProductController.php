@@ -16,9 +16,15 @@ class ProductController extends Controller
   }
 
   public function store(Request $request){
+    //Form Validation
+    $request->validate([
+      
+    ]);
+    //Uploading image
     $imageName = time().'.'.$request->image->extension();
     $request->image->move(public_path('products'), $imageName);
 
+    //Accessing to form data
     $product = new Product;
     $product->name = $request->name;
     $product->description = $request->description;
