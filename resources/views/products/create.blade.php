@@ -23,7 +23,7 @@
     </div>
   </nav>
 </div>
-    <form method="POST">
+    <form method="POST" action="products/store">
       @csrf
       <div>
         <label for="name">Name</label>
