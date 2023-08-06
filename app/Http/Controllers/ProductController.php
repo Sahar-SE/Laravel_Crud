@@ -20,7 +20,8 @@ class ProductController extends Controller
     $request->image->move(public_path('products'), $imageName);
 
     $product = new Product;
-    $product->image->$imageName;
-    
+    $product->name = $request->name;
+    $product->description = $request->description;
+    $product->image = $imageName;
   }
 }
