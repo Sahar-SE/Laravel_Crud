@@ -23,6 +23,12 @@
     </div>
   </nav>
 </div>
+
+  @if($message = Session::get('success'))
+    <div>
+      <strong>{{ $message }}</strong>
+    </div>
+
 <div class="max-w-md mx-auto mt-5">
     <form method="POST" action="/products/store" enctype="multipart/form-data">
       @csrf
