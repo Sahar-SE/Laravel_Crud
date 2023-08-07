@@ -34,6 +34,6 @@ class ProductController extends Controller
     $product->image = $imageName;
 
     $product->save();
-    return back();
+    return back()->withSuccess('New Product Added!');
   }
 }
