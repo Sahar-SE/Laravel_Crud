@@ -32,7 +32,7 @@
 
 <div class="max-w-md mx-auto mt-5">
   <h3 class="font-bold text-lg mb-4">Edit Product {{$product->name}}</h3>
-    <form method="POST" action="/products/{{$product->id}}/update" enctype="multipart/form-data">
+    <form method="PUT" action="/products/{{$product->id}}/update" enctype="multipart/form-data">
       @csrf
       <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
