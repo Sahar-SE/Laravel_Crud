@@ -27,16 +27,22 @@
       @csrf
       <div>
         <label for="name">Name</label>
-        <input type="text" name="name"/>
+        <input type="text" name="name" value="{{ old('name') }}"/>
         @if($errors->has('name'))
           <span class="text-red-500">{{$errors->first('name')}}</span>
         @endif
 
         <label>Description</label>
-        <textarea name="description" id="" cols="30" rows="10"></textarea>
+        <textarea name="description" id="" cols="30" rows="10" value="{{ old('description') }}"></textarea>
+        @if($errors->has('description'))
+          <span class="text-red-500">{{$errors->first('description')}}</span>
+        @endif
 
         <label>Image</label>
-        <input type="file" name="image"/>
+        <input type="file" name="image" value="{{ old('image') }}"/>
+        @if($errors->has('image'))
+          <span class="text-red-500">{{$errors->first('image')}}</span>
+        @endif
 
         <button type="submit">Submit</button>
 
