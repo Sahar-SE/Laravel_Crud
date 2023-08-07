@@ -38,9 +38,10 @@
     <tbody class="text-gray-600 text-sm font-light">
       @foreach($products as $product)
         <tr class="border-b border-gray-200 hover:bg-gray-100">
-        <td class="py-3 px-6 text-left">{{ $loop->index }}</td>
+        <td class="py-3 px-6 text-left">{{ $loop->index+1 }}</td>
           <td class="py-3 px-6 text-left whitespace-nowrap">{{ $product->name }}</td>
-          <td class="py-3 px-6 text-left"><img src="{{ asset('public/products/'.$product->image) }}" alt="" width="100"></td>
+          <td class="py-3 px-6 text-left">
+            <img src="products/{{ $product->image) }}" class="rounded-full w-16 h-16"></td>
           <td class="py-3 px-6 text-left flex">
             <a href="products/{{ $product->id }}/edit" class="p-3 bg-blue-500 text-white rounded-md m-2">Edit</a>
             <form action="products/{{ $product->id }}" method="POST">
