@@ -70,7 +70,10 @@ class ProductController extends Controller
     return back()->withSuccess('Product Updated!');
   }
 
-  public function delete(Request $request, $id){
-    
+  public function destroy(Request $request, $id){
+    $product = Product::find($id);
+    $product->delete();
+    return back()->withSuccess('Product Deleted!');
+
   }
 }
