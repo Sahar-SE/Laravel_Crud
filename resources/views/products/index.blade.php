@@ -47,7 +47,7 @@
             <form action="products/{{ $product->id }}/delete" method="POST">
               @csrf
               @method('DELETE')
-              <button class="p-3 bg-red-500 text-white rounded-md m-2">Delete</button>
+              <button type="submit" class="p-3 bg-red-500 text-white rounded-md m-2">Delete</button>
             </form>
           </td>
         </tr>
