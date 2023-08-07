@@ -23,37 +23,48 @@
     </div>
   </nav>
 </div>
+<div class="max-w-md mx-auto mt-5">
     <form method="POST" action="/products/store" enctype="multipart/form-data">
       @csrf
-      <div class="flex flex-col">
-        <label for="name">Name</label>
-        <input type="text"
-         name="name" value="{{ old('name') }}"
-         class="border border-sm"/>
+      
+      <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+          <input type="text"
+          name="name" value="{{ old('name') }}"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
+           leading-tight focus:outline-none focus:shadow-outline"/>
 
-        @if($errors->has('name'))
-          <span class="text-red-500">{{$errors->first('name')}}</span>
-        @endif
+          @if($errors->has('name'))
+            <span class="text-red-500 text-xs">{{$errors->first('name')}}</span>
+          @endif
+        </div>
 
-        <label>Description</label>
-        <textarea name="description" rows="5"
-          class="border border-sm">
-          {{ old('description') }}
-        </textarea>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">Description</label>
+          <textarea name="description" rows="5"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
+           leading-tight focus:outline-none focus:shadow-outline">{{ old('description') }}</textarea>
 
-        @if($errors->has('description'))
-          <span class="text-red-500">{{$errors->first('description')}}</span>
-        @endif
+          @if($errors->has('description'))
+            <span class="text-red-500 text-xs">{{$errors->first('description')}}</span>
+          @endif
+        </div>
 
-        <label>Image</label>
-        <input type="file"
-         name="image" value="{{ old('image') }}"
-         class="border border-sm"/>
-        @if($errors->has('image'))
-          <span class="text-red-500">{{$errors->first('image')}}</span>
-        @endif
-        <button type="submit">Submit</button>
-      </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">Image</label>
+          <input type="file"
+             name="image" value="{{ old('image') }}"
+             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
+              leading-tight focus:outline-none focus:shadow-outline"/>
+
+          @if($errors->has('image'))
+            <span class="text-red-500 text-xs">{{$errors->first('image')}}</span>
+          @endif
+        </div>
+        <button type="submit" class="bg-slate-700 hover:bg-slate-800 text-white font-bold
+         py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+      
     </form>
+    </div>
 </body>
 </html>
