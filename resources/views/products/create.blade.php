@@ -25,14 +25,14 @@
 </div>
 
   @if($message = Session::get('success'))
-    <div>
-      <strong>{{ $message }}</strong>
+    <div class="bg-green-200 p-5">
+      <p class="text-green-800">{{ $message }}</p>
     </div>
+  @endif
 
 <div class="max-w-md mx-auto mt-5">
     <form method="POST" action="/products/store" enctype="multipart/form-data">
       @csrf
-      
       <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
           <input type="text"
