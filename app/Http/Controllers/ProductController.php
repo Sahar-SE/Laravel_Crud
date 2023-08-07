@@ -52,20 +52,25 @@ class ProductController extends Controller
       'description' => 'required',
       'image' => 'nullable',
     ]);
+
+    $product = Product::find($id);
     
     if(isset($request->image)){
       //Uploading image
       $imageName = time().'.'.$request->image->extension();
       $request->image->move(public_path('products'), $imageName);
+      $product->image = $imageName;
     }
 
     //Accessing to form data
-    $product = Product::find($id);
     $product->name = $request->name;
     $product->description = $request->description;
-    $product->image = $imageName;
 
     $product->save();
     return back()->withSuccess('Product Updated!');
+  }
+
+  public function delete(Request $request, $id){
+    
   }
 }
