@@ -31,8 +31,8 @@
   @endif
 
 <div class="max-w-md mx-auto mt-5">
-  <h3>Edit Product {{$product->id}}</h3>
-    <form method="POST" action="/products/store" enctype="multipart/form-data">
+  <h3>Edit Product {{$product->name}}</h3>
+    <form method="POST" action="/products/{{$product->id}}/update" enctype="multipart/form-data">
       @csrf
       <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
