@@ -46,6 +46,26 @@ class ProductController extends Controller
   }
 
   public function update(Request $request, $id){
-    dd($request->all());
+    //Form Validation
+    $request->validate([
+      'name' => 'required',
+      'description' => 'required',
+      'image' => 'nullable',
+    ]);
+    
+    if(isset($request->image)){
+      //Uploading image
+      $imageName = time().'.'.$request->image->extension();
+      $request->image->move(public_path('products'), $imageName);
+    }
+
+    //Accessing to form data
+    $product = Product::find($id);
+    $product->name = $request->name;
+    $product->description = $request->description;
+    $product->image = $imageName;
+
+    $product->save();
+    return back()->withSuccess('Product Updated!');
   }
 }
