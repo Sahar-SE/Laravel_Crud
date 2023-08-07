@@ -8,7 +8,8 @@ use App\Models\Product;
 class ProductController extends Controller
 {
   public function index(){
-    return view('products.index');
+    $products = Product::get();
+    return view('products.index',['products'=>$products]);
   }
 
   public function create(){
@@ -34,6 +35,6 @@ class ProductController extends Controller
     $product->image = $imageName;
 
     $product->save();
-    return back();
+    return back()->withSuccess('New Product Added!');
   }
 }

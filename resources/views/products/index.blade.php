@@ -26,6 +26,31 @@
   <div class="btn btn-black text-right m-8">
     <a href="products/create" class="p-3 bg-slate-700 text-white rounded-md">New Product</a>
   </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($products as $product)
+        <tr>
+          <td>{{ $product->name }}</td>
+          <td>{{ $product->description }}</td>
+          <td><img src="{{ asset('storage/images/'.$product->image) }}" alt="" width="100"></td>
+          <td>
+            <a href="products/{{ $product->id }}/edit" class="p-3 bg-blue-500 text-white rounded-md">Edit</a>
+            <form action="products/{{ $product->id }}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="p-3 bg-red-500 text-white rounded-md">Delete</button>
+            </form>
+          </td>
+        </tr>
+      @endforeach
 
 </body>
 </html>
