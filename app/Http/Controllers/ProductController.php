@@ -37,4 +37,8 @@ class ProductController extends Controller
     $product->save();
     return back()->withSuccess('New Product Added!');
   }
+
+  public function edit($id){
+    
+  }
 }
