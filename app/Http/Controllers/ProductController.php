@@ -44,4 +44,8 @@ class ProductController extends Controller
     // $product = Product::where('id', $id)->first();
     return view('products.edit', ['product'=>$product]);
   }
+
+  public function update(Request $request, $id){
+    dd($request->all());
+  }
 }
