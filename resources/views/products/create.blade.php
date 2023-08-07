@@ -28,6 +28,9 @@
       <div>
         <label for="name">Name</label>
         <input type="text" name="name"/>
+        @if($errors->has('name'))
+          <span class="text-red-500">{{$errors->first('name')}}</span>
+        @endif
 
         <label>Description</label>
         <textarea name="description" id="" cols="30" rows="10"></textarea>
