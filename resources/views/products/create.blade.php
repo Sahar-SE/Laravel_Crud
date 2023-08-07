@@ -25,27 +25,34 @@
 </div>
     <form method="POST" action="/products/store" enctype="multipart/form-data">
       @csrf
-      <div>
+      <div class="flex flex-col">
         <label for="name">Name</label>
-        <input type="text" name="name" value="{{ old('name') }}"/>
+        <input type="text"
+         name="name" value="{{ old('name') }}"
+         class="border border-sm"/>
+
         @if($errors->has('name'))
           <span class="text-red-500">{{$errors->first('name')}}</span>
         @endif
 
         <label>Description</label>
-        <textarea name="description" id="" cols="30" rows="10" value="{{ old('description') }}"></textarea>
+        <textarea name="description" rows="5"
+          class="border border-sm">
+          {{ old('description') }}
+        </textarea>
+
         @if($errors->has('description'))
           <span class="text-red-500">{{$errors->first('description')}}</span>
         @endif
 
         <label>Image</label>
-        <input type="file" name="image" value="{{ old('image') }}"/>
+        <input type="file"
+         name="image" value="{{ old('image') }}"
+         class="border border-sm"/>
         @if($errors->has('image'))
           <span class="text-red-500">{{$errors->first('image')}}</span>
         @endif
-
         <button type="submit">Submit</button>
-
       </div>
     </form>
 </body>
