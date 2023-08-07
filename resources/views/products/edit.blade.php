@@ -31,6 +31,7 @@
   @endif
 
 <div class="max-w-md mx-auto mt-5">
+  <h3>Edit Product {{$product->id}}</h3>
     <form method="POST" action="/products/store" enctype="multipart/form-data">
       @csrf
       <div class="mb-4">
