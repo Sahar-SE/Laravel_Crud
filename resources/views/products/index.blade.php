@@ -23,6 +23,13 @@
       </div>
     </nav>
   </div>
+
+    @if($message = Session::get('success'))
+      <div class="bg-red-200 p-5">
+        <p class="text-red-800">{{ $message }}</p>
+      </div>
+    @endif
+
   <div class="btn btn-black text-right m-8">
     <a href="products/create" class="p-3 bg-slate-700 text-white rounded-md">New Product</a>
   </div>
@@ -44,10 +51,10 @@
             <img src="products/{{ $product->image }}" class="rounded-full w-16 h-16"></td>
           <td class="py-3 px-6 text-left flex">
             <a href="products/{{ $product->id }}/edit" class="p-3 bg-blue-500 text-white rounded-md m-2">Edit</a>
-            <form action="products/{{ $product->id }}" method="POST">
+            <form action="products/{{ $product->id }}/delete" method="POST">
               @csrf
               @method('DELETE')
-              <button class="p-3 bg-red-500 text-white rounded-md m-2">Delete</button>
+              <button type="submit" class="p-3 bg-red-500 text-white rounded-md m-2">Delete</button>
             </form>
           </td>
         </tr>
