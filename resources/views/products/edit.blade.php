@@ -50,7 +50,7 @@
           <label class="block text-gray-700 text-sm font-bold mb-2">Description</label>
           <textarea name="description" rows="5"
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
-           leading-tight focus:outline-none focus:shadow-outline">{{ old('description', $product->name) }}</textarea>
+           leading-tight focus:outline-none focus:shadow-outline">{{ old('description', $product->description) }}</textarea>
 
           @if($errors->has('description'))
             <span class="text-red-500 text-xs">{{$errors->first('description')}}</span>
@@ -60,7 +60,7 @@
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2">Image</label>
           <input type="file"
-             name="image" value="{{ old('image', $product->name) }}"
+             name="image" value="{{ old('image', $product->image) }}"
              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
               leading-tight focus:outline-none focus:shadow-outline"/>
 
