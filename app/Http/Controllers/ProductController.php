@@ -40,6 +40,8 @@ class ProductController extends Controller
 
   public function edit($id){
     $product = Product::find($id);
+    //we can also use where method to find the product
+    // $product = Product::where('id', $id)->first();
     return view('products.edit', ['product'=>$product]);
   }
 }
