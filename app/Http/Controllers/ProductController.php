@@ -8,7 +8,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
   public function index(){
-    $products = Product::latest()->paginite(5);
+    $products = Product::latest()->paginate(5);
     return view('products.index',['products'=>$products]);
   }
 
