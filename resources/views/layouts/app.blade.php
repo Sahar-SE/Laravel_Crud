@@ -29,5 +29,7 @@
         <p class="text-red-800">{{ $message }}</p>
       </div>
     @endif
+
+    @yield('main')
 </body>
 </html>
