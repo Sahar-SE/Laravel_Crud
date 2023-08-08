@@ -8,7 +8,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
   public function index(){
-    $products = Product::get();
+    $products = Product::latest()->paginate(5);
     return view('products.index',['products'=>$products]);
   }
 
@@ -70,10 +70,15 @@ class ProductController extends Controller
     return back()->withSuccess('Product Updated!');
   }
 
-  public function destroy(Request $request, $id){
+  public function destroy($id){
     $product = Product::find($id);
     $product->delete();
     return back()->withSuccess('Product Deleted!');
 
+  }
+
+  public function show($id){
+    $product = Product::find($id);
+    return view('products.show', ['product'=>$product]);
   }
 }
