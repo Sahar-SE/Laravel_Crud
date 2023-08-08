@@ -3,7 +3,7 @@
 
 <div>
   <div>
-    <img src="products/{{$product->image}}" alt="{{$product->name}}">
+    <img src="/products/{{$product->image}}" alt="{{$product->name}}">
   </div>
   <div>
     {{$product->name}}

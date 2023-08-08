@@ -32,6 +32,7 @@
         </tr>
       @endforeach
     </tbody>
+    {{$products->links()}}
   </table>
 @endsection
      
