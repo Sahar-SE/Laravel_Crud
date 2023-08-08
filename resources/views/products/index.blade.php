@@ -32,7 +32,7 @@
         </tr>
       @endforeach
     </tbody>
-    {{$products->links()}}
   </table>
+  {{$products->links()}}
 @endsection
      
