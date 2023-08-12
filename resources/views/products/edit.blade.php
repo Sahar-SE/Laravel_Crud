@@ -4,7 +4,8 @@
 
 @if($message = Session::get('success'))
       <div class="bg-green-200 p-5">
-        <p class="text-red-800">{{ $message }}</p>
+        <p class="text-green
+        -800">{{ $message }}</p>
       </div>
     @endif
 
