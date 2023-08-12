@@ -2,6 +2,12 @@
 
 @section('main')
 
+@if($message = Session::get('success'))
+      <div class="bg-green-200 p-5">
+        <p class="text-red-800">{{ $message }}</p>
+      </div>
+    @endif
+
 <div class="max-w-md mx-auto mt-5">
     <form method="POST" action="/products/store" enctype="multipart/form-data">
       @csrf
