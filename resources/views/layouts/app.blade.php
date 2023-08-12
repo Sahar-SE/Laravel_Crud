@@ -24,12 +24,6 @@
     </nav>
   </div>
 
-    @if($message = Session::get('success'))
-      <div class="bg-red-200 p-5">
-        <p class="text-red-800">{{ $message }}</p>
-      </div>
-    @endif
-
     @yield('main')
 </body>
 </html>

@@ -2,6 +2,12 @@
 
 @section('main')
 
+@if($message = Session::get('success'))
+      <div class="bg-red-200 p-5">
+        <p class="text-red-800">{{ $message }}</p>
+      </div>
+    @endif
+
   <div class="btn btn-black text-right m-8">
     <a href="products/create" class="p-3 bg-slate-700 text-white rounded-md">New Product</a>
   </div>
