@@ -16,7 +16,10 @@
 
   <!-- Create a form for the update of a product and it will redirected to action path -->
     <form method="POST" action="/products/{{$product->id}}/update" enctype="multipart/form-data">
+      <!-- Use CSRF directive to avoid Cross Site Request Furgery Attacks  -->
       @csrf
+
+      <!-- Adding PUT method by Laravel because the HTML form just have POST and GET method -->
       @method('PUT')
       <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2">Name</label>
