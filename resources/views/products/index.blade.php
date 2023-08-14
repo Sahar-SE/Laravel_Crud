@@ -27,6 +27,7 @@
       <!-- Create a foreach to loop through data in database -->
       @foreach($products as $product)
         <tr class="border-b border-gray-200 hover:bg-gray-100">
+          <!-- Create numbers for table accorfing to the data stored in browser -->
         <td class="py-3 px-6 text-left">{{ $loop->index+1 }}</td>
           <td class="py-3 px-6 text-left whitespace-nowrap"><a href="products/{{ $product->id }}/show">{{ $product->name }}</a></td>
           <td class="py-3 px-6 text-left">
