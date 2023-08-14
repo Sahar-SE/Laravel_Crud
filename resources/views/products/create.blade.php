@@ -1,7 +1,7 @@
 <!-- Inherit a master layout -->
 @extends('layouts.app')
 
-
+<!-- Create a section for the yeild of application -->
 @section('main')
 
 @if($message = Session::get('success'))
