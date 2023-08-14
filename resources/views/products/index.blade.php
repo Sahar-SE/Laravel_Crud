@@ -4,6 +4,7 @@
 <!-- Create a section for the yeild of application -->
 @section('main')
 
+<!-- Create a message for the success of an operation -->
 @if($message = Session::get('success'))
       <div class="bg-red-200 p-5">
         <p class="text-red-800">{{ $message }}</p>
