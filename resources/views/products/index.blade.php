@@ -1,3 +1,4 @@
+<!-- Inherit a master layout -->
 @extends('layouts.app')
 
 @section('main')
