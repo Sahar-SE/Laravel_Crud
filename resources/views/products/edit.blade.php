@@ -4,6 +4,7 @@
 <!-- Create a section for the yeild of application -->
 @section('main')
 
+<!-- Create a message for the success of an operation -->
 @if($message = Session::get('success'))
       <div class="bg-green-200 p-5">
         <p class="text-green-800">{{ $message }}</p>
@@ -12,6 +13,8 @@
 
 <div class="max-w-md mx-auto mt-5">
   <h3 class="font-bold text-lg mb-4">Edit Product {{$product->name}}</h3>
+
+  <!-- Create a form for the update of a product and it will redirected to action path -->
     <form method="POST" action="/products/{{$product->id}}/update" enctype="multipart/form-data">
       @csrf
       @method('PUT')
