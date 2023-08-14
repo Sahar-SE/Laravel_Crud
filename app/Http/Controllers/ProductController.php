@@ -7,6 +7,7 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
+  // index action to show all products the latest function will show the latest product first
   public function index(){
     $products = Product::latest()->paginate(3);
     return view('products.index',['products'=>$products]);
