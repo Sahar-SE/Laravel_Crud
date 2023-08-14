@@ -28,6 +28,7 @@
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
            leading-tight focus:outline-none focus:shadow-outline"/>
 
+           <!-- Add the varification to input field -->
           @if($errors->has('name'))
             <span class="text-red-500 text-xs">{{$errors->first('name')}}</span>
           @endif
